@@ -46,6 +46,16 @@ while True:
             print(f"\nTurn {turn}:")
             print(f"Your card: {player_deck[turn-1]}")
             print(f"Computer's card: {computer_deck[turn-1]}")
+            # Display the card table
+            # print("\nCard table:")
+            # print("Player's cards:", end=' ')
+            # for card in player_deck:
+            #    print(card, end=' ')
+            # print()
+            # print("Computer's cards:", end=' ')
+            # for card in computer_deck:
+            #    print(card, end=' ')
+            print()
 
             # Determine the winner of the turn
             player_effect = card_effects[player_deck[turn-1]]
@@ -85,6 +95,20 @@ while True:
             print("Computer wins.")
         else:
             print("It's a tie!")
+
+        # On final round, show the card table
+        print("\nCard table:")
+        print("Player's cards:", end=' ')
+        for card in player_deck:
+            print(card, end=' ')
+        print()
+        print("Computer's cards:", end=' ')
+        for card in computer_deck:
+            print(card, end=' ')
+        print()
+
+        # Wait for the user to press enter before continuing
+        input("Press enter to continue...")
 
         # Reset the game
         reset_game()
