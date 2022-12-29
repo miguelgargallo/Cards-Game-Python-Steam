@@ -1,5 +1,3 @@
-# 2022 © All rights reserved. Pylar AI creative ML License. [License](https://huggingface.co/spaces/superdatas/LICENSE)
-
 import random
 
 # Welcome message
@@ -53,6 +51,97 @@ while True:
             for card in computer_deck:
                 print(card, end=' ')
             print()
+            print(f"\nTurn {turn}:")
+            print(f"Your card: {player_deck[turn-1]}")
+            print(f"Computer's card: {computer_deck[turn-1]}")
+
+            # Determine the winner of the turn
+            player_effect = card_effects[player_deck[turn-1]]
+            computer_effect = card_effects[computer_deck[turn-1]]
+            if player_effect == 'soak' and computer_effect == 'burn':
+                print("You win the turn!")
+            elif player_effect == 'burn' and computer_effect == 'soak':
+                print("Computer wins the turn.")
+            elif player_effect == 'dig' and computer_effect == 'blow':
+                print("You win the turn!")
+            elif player_effect == 'blow' and computer_effect == 'dig':
+                print("Computer wins the turn.")
+            elif player_effect == 'grow' and computer_effect == 'soak':
+                print("You win the turn!")
+            elif player_effect == 'soak' and computer_effect == 'grow':
+                print("Computer wins the turn.")
+            else:
+                print("It's a tie!")
+
+            # Remove the cards from each player's deck
+            player_deck.pop(0)
+            computer_deck.pop(0)
+
+            # Wait for the user to press enter before continuing
+            input("Press enter to continue...")
+            # Determine the overall winner
+            player_score = player_deck.count('💧') + player_deck.count(
+                '🔥') + player_deck.count('🪨') + player_deck.count('💨') + player_deck.count('🌱')
+            computer_score = computer_deck.count('💧') + computer_deck.count(
+                '🔥') + computer_deck.count('🪨') + computer_deck.count('💨') + computer_deck.count('🌱')
+
+            if player_score > computer_score:
+                print("\nCongratulations, you win the game!")
+            elif player_score < computer_score:
+                print("\nSorry, the computer wins the game.")
+            else:
+                print("\nIt's a tie!")
+
+                # Determine the overall winner
+        player_score = player_deck.count('💧') + player_deck.count(
+            '🔥') + player_deck.count('🪨') + player_deck.count('💨') + player_deck.count('🌱')
+        computer_score = computer_deck.count('💧') + computer_deck.count(
+            '🔥') + computer_deck.count('🪨') + computer_deck.count('💨') + computer_deck.count('🌱')
+
+        if player_score > computer_score:
+            print("\nCongratulations, you win the game!")
+        elif player_score < computer_score:
+            print("\nSorry, the computer wins the game.")
+        else:
+            print("\nIt's a tie!")
+
+        # Reset the game
+        reset_game()
+    elif choice == '2':
+        # Quit the game
+        break
+    else:
+        # Invalid choice
+        print("Invalid choice. Please enter a valid choice from the menu.")
+
+# Main game loop
+while True:
+    # Display menu
+    print("\nMenu:")
+    print("1. Play against the computer")
+    print("2. Quit")
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        # Deal cards to each player
+        for i in range(11):
+            player_deck.append(cards.pop())
+            computer_deck.append(cards.pop())
+
+        # Play the game
+        for turn in range(1, 12):
+            # Display the card table
+            print("\nCard table:")
+            print("Your cards:", end=' ')
+            for card in player_deck:
+                print(card, end=' ')
+            print("\nComputer's cards:", end=' ')
+            for card in computer_deck:
+                print(card, end=' ')
+
+            print(f"\nTurn {turn}:")
+            print(f"Your card: {player_deck[turn-1]}")
+            print(f"Computer's card: {computer_deck[turn-1]}")
 
             # Determine the winner of the turn
             player_effect = card_effects[player_deck[turn-1]]
@@ -75,26 +164,27 @@ while True:
             # Wait for the user to press enter before continuing
             input("Press enter to continue...")
 
-        # Determine the overall
-        if len(player_deck) > len(computer_deck):
-            print("\nYou win the game!")
-        elif len(player_deck) < len(computer_deck):
-            print("\nComputer wins the game.")
+        # Determine the overall winner
+        player_score = player_deck.count('💧') + player_deck.count(
+            '🔥') + player_deck.count('🪨') + player_deck.count('💨') + player_deck.count('🌱')
+        computer_score = computer_deck.count('💧') + computer_deck.count(
+            '🔥') + computer_deck.count('🪨') + computer_deck.count('💨') + computer_deck.count('🌱')
+
+        if player_score > computer_score:
+            print("\nCongratulations, you win the game!")
+        elif player_score < computer_score:
+            print("\nSorry, the computer wins the game.")
         else:
             print("\nIt's a tie!")
 
-        # Ask the user if they want to play again
-        play_again = input("Do you want to play again? (y/n) ")
-        if play_again == 'y':
-            reset_game()
-        else:
-            break
+        # Reset the game
+        reset_game()
     elif choice == '2':
+        # Quit the game
         break
     else:
-        print("Invalid choice.")
+        # Invalid choice
+        print("Invalid choice. Please enter a valid choice.")
 
 # Goodbye message
 print("Thanks for playing!")
-
-# Path: game.py
