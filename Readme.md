@@ -1,28 +1,27 @@
 # The Cards Game
 
+The game is called "The Cards Game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table.
+
+## Goal
+
+The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
+
 - [The Cards Game](#the-cards-game)
-- [Introduction](#introduction)
-  - [What is the game?](#what-is-the-game)
+  - [Goal](#goal)
   - [How many players and cards are involved?](#how-many-players-and-cards-are-involved)
   - [What are the types of cards and how are they symbolized?](#what-are-the-types-of-cards-and-how-are-they-symbolized)
 - [Game mechanics](#game-mechanics)
   - [How do the different types of cards interact with each other?](#how-do-the-different-types-of-cards-interact-with-each-other)
 - [Game play](#game-play)
   - [How is the game played?](#how-is-the-game-played)
-  - [What is the goal of the game?](#what-is-the-goal-of-the-game)
+- [What is the goal of the game?](#what-is-the-goal-of-the-game)
   - [How do players score points?](#how-do-players-score-points)
 - [End of game](#end-of-game)
   - [What happens at the end of the game?](#what-happens-at-the-end-of-the-game)
   - [Is it possible to earn additional points after the game has ended?](#is-it-possible-to-earn-additional-points-after-the-game-has-ended)
 - [Conclusion](#conclusion)
   - [Summary of the game and its mechanics.](#summary-of-the-game-and-its-mechanics)
-
-
-# Introduction
-
-## What is the game?
-
-The game is called "The Cards Game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table. The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
+- [License](#license)
 
 ## How many players and cards are involved?
 
@@ -50,7 +49,7 @@ The cards interact with each other in the following way:
 
 The game is played by turns. Each turn, a player plays one card on the table. The player who plays the card with the highest value wins the turn. If both players play the same card, the turn is a draw. The player who won the turn scores 1 point. If the turn is a draw, no player scores any points.
 
-## What is the goal of the game?
+# What is the goal of the game?
 
 The goal of the game is to score points by grouping cards of the same type. The player with the most points at the end of the game wins.
 
@@ -73,3 +72,7 @@ No. It is not possible to earn additional points after the game has ended.
 ## Summary of the game and its mechanics.
 
 The game is called "The 11 cards game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table. The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
+
+# License
+
+2022 © All rights reserved. Pylar AI creative ML License. [License](https://huggingface.co/spaces/superdatas/LICENSE)
