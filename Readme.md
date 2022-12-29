@@ -19,6 +19,8 @@ The goal of the game is to score points by grouping cards of the same type. The 
 - [End of game](#end-of-game)
   - [What happens at the end of the game?](#what-happens-at-the-end-of-the-game)
   - [Is it possible to earn additional points after the game has ended?](#is-it-possible-to-earn-additional-points-after-the-game-has-ended)
+- [Updates](#updates)
+  - [v1.0.2 Audit Update](#v102-audit-update)
 - [Conclusion](#conclusion)
   - [Summary of the game and its mechanics.](#summary-of-the-game-and-its-mechanics)
 - [License](#license)
@@ -66,6 +68,24 @@ At the end of the game, the player with the most points wins.
 ## Is it possible to earn additional points after the game has ended?
 
 No. It is not possible to earn additional points after the game has ended.
+
+# Updates
+
+## v1.0.2 Audit Update
+
+    Add comments to explain the purpose of each block of code. This will make it easier to understand the code and improve its readability.
+
+    Consider using a dictionary to map the cards to their corresponding effects, rather than using a series of if statements. This will make the code more concise and easier to maintain.
+
+    Use a function to reset the game at the end of each round. This will reduce redundancy and make the code easier to read.
+
+    Use descriptive variable names to make the code more readable. For example, you could use player_card and computer_card instead of player_deck[turn-1] and computer_deck[turn-1].
+
+    Use a for loop to iterate over the turns, rather than a while loop with a counter variable. This will make the code simpler and easier to understand.
+
+    Consider using a for loop to deal the cards to each player, rather than using a for loop with a counter variable. This will make the code more concise and easier to understand.
+
+    Consider adding error handling to handle invalid input and prevent the program from crashing. For example, you could use a try-except block to handle the case where the user enters a value that cannot be converted to an integer.
 
 # Conclusion
 
