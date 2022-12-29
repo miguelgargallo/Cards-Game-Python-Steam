@@ -21,6 +21,7 @@ The goal of the game is to score points by grouping cards of the same type. The 
   - [Is it possible to earn additional points after the game has ended?](#is-it-possible-to-earn-additional-points-after-the-game-has-ended)
 - [Updates](#updates)
   - [v1.0.2 Audit Update](#v102-audit-update)
+  - [1.0.3 Table on the match](#103-table-on-the-match)
 - [Conclusion](#conclusion)
   - [Summary of the game and its mechanics.](#summary-of-the-game-and-its-mechanics)
 - [License](#license)
@@ -86,6 +87,15 @@ No. It is not possible to earn additional points after the game has ended.
     Consider using a for loop to deal the cards to each player, rather than using a for loop with a counter variable. This will make the code more concise and easier to understand.
 
     Consider adding error handling to handle invalid input and prevent the program from crashing. For example, you could use a try-except block to handle the case where the user enters a value that cannot be converted to an integer.
+
+## 1.0.3 Table on the match
+
+We added a table to view the cards.
+
+```bash
+Player's cards: 🌱 🪨 💧 💨 🔥 🌱 🪨 💧 💨 🔥 🌱
+Computer's cards: 💨 🔥 🌱 🪨 💧 💨 🔥 🌱 🪨 💧 💨
+```
 
 # Conclusion
 

@@ -43,9 +43,16 @@ while True:
 
         # Play the game
         for turn in range(1, 12):
-            print(f"\nTurn {turn}:")
-            print(f"Your card: {player_deck[turn-1]}")
-            print(f"Computer's card: {computer_deck[turn-1]}")
+            # Display the card table
+            print("\nCard table:")
+            print("Player's cards:", end=' ')
+            for card in player_deck:
+                print(card, end=' ')
+            print()
+            print("Computer's cards:", end=' ')
+            for card in computer_deck:
+                print(card, end=' ')
+            print()
 
             # Determine the winner of the turn
             player_effect = card_effects[player_deck[turn-1]]
@@ -68,27 +75,26 @@ while True:
             # Wait for the user to press enter before continuing
             input("Press enter to continue...")
 
-        # Determine the overall winner
-        player_score = player_deck.count('💧') + player_deck.count(
-            '🔥') + player_deck.count('🪨') + player_deck.count('💨') + player_deck.count('🌱')
-        computer_score = computer_deck.count('💧') + computer_deck.count(
-            '🔥') + computer_deck.count('🪨') + computer_deck.count('💨') + computer_deck.count('🌱')
-
-        if player_score > computer_score:
-            print("\nCongratulations, you win the game!")
-        elif player_score < computer_score:
-            print("\nSorry, the computer wins the game.")
+        # Determine the overall
+        if len(player_deck) > len(computer_deck):
+            print("\nYou win the game!")
+        elif len(player_deck) < len(computer_deck):
+            print("\nComputer wins the game.")
         else:
             print("\nIt's a tie!")
 
-        # Reset the game
-        reset_game()
+        # Ask the user if they want to play again
+        play_again = input("Do you want to play again? (y/n) ")
+        if play_again == 'y':
+            reset_game()
+        else:
+            break
     elif choice == '2':
-        # Quit the game
         break
     else:
-        # Invalid choice
-        print("Invalid choice. Please enter a valid choice.")
+        print("Invalid choice.")
 
 # Goodbye message
 print("Thanks for playing!")
+
+# Path: game.py
