@@ -29,7 +29,7 @@
 
 ## What is the game?
 
-The game is called "The 11 cards game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table. The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
+The game is called "The Cards Game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table. The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
 
 ## How many players and cards are involved?
 
