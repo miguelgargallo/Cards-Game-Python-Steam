@@ -27,6 +27,29 @@ def reset_game():
     computer_deck.clear()
 
 
+# Define table 22x22 in the terminal
+def table():
+    """Display 22 x 22 pixels table in the terminal."""
+    print('┌' + '─' * 22 + '┐')
+    for i in range(22):
+        # Print table and cards used by myself and rival
+        print((f"{player_deck[turn-1]}") + '│' + ' ' *
+              22 + '│' + (f"{computer_deck[turn-1]}"))
+    print('└' + '─' * 22 + '┘')
+
+
+def cards_used_by_myself():
+    """Display cards used by myself in the terminal one by one nearby the table axys y"""
+    for i in range(1):
+        print(f"Your card: {player_deck[turn-1]}")
+
+
+def cards_used_by_rival():
+    """Display cards used by rival in the terminal one by one nearby the table axys y"""
+    for i in range(1):
+        print(f"Computer's card: {computer_deck[turn-1]}")
+
+
 # Main game loop
 while True:
     # Display menu
@@ -46,6 +69,9 @@ while True:
             print(f"\nTurn {turn}:")
             print(f"Your card: {player_deck[turn-1]}")
             print(f"Computer's card: {computer_deck[turn-1]}")
+            print(f"table 22x22: {table()}")
+            print(f"my deck: {cards_used_by_myself()}")
+            print(f"rival deck: {cards_used_by_rival()}")
             # Display the card table
             # print("\nCard table:")
             # print("Player's cards:", end=' ')
