@@ -1,41 +1,108 @@
-Here is a high-level audit of the file:
+# The Cards Game
 
-    The turns module is imported at the top of the file, but it is not used anywhere in the script.
-    The cards list is created and then shuffled, but it is not used anywhere in the game.
-    The player_deck and computer_deck lists are created and then dealt cards from the cards list, but the cards list is not used again.
-    The card_effects dictionary is defined but not used in the game.
-    The game is played in a loop that continues until either the player or the computer has no more cards. However, the loop is not actually necessary as the game can be implemented using a series of functions that are called in sequence.
-    The get_player_move() and draw_card() functions are defined but not used in the game.
-    The game is played by comparing the player's and computer's current cards and deciding the winner based on the card effects. However, the card effects are not used anywhere in the game, so the player and the computer could just as well be comparing random cards.
+The game is called "The Cards Game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table.
 
-I hope this helps! Let me know if you have any questions.
-Pencil Originals
-forget the last 2 audits, audit the files together, write 25 points to improve
+## Goal
 
-Here is a list of 25 potential improvements for the two files:
+The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
 
-    Remove the unused code from both files. This includes the turn() and card() functions in turns.py, as well as the cards list, the get_player_move() and draw_card() functions, and the card_effects dictionary in games.py.
-    Refactor the cards_in_turn_1() to cards_in_turn_5() functions in turns.py into a single function that takes the number of turns to display as a parameter and uses a loop to print the current and previous cards.
-    Modify the game loop in games.py to use a series of functions instead of a loop. This will make the game easier to understand and modify.
-    Implement the card effects in the game by comparing the card effects in the card_effects dictionary rather than just comparing the cards themselves.
-    Modify the game to draw new cards for the player and the computer if either of them does not have any cards left.
-    Add a function to check for the end of the game and determine the winner.
-    Implement a scoring system for the game.
-    Add a function to allow the player to choose their card from their deck instead of always playing the first card.
-    Add a function to let the player choose to play a card from their hand or draw a new card.
-    Implement a "wildcard" card that can be played as any other card.
-    Add a function to shuffle the player's and computer's decks when they run out of cards.
-    Add a function to display the current scores for the player and the computer.
-    Add a function to display the player's and computer's remaining cards.
-    Add a function to allow the player to view the rules of the game.
-    Implement a two-player mode for the game.
-    Add a function to let the player choose the number of cards in their deck.
-    Add a function to let the player choose the number of turns in the game.
-    Add a function to allow the player to customize the card effects.
-    Implement a "skip turn" card that allows the player to skip their turn.
-    Implement a "draw two" card that forces the other player to draw two cards.
-    Add a function to let the player choose the number of card decks to use in the game.
-    Add a function to let the player choose the cards to include in the game.
-    Implement a "reverse" card that reverses the order of play.
-    Implement a "swap hands" card that allows the player to swap their hand with the computer's hand.
-    Add a function to save the player's progress and allow them to resume the game later.
+- [The Cards Game](#the-cards-game)
+  - [Goal](#goal)
+  - [How many players and cards are involved?](#how-many-players-and-cards-are-involved)
+  - [What are the types of cards and how are they symbolized?](#what-are-the-types-of-cards-and-how-are-they-symbolized)
+- [Game mechanics](#game-mechanics)
+  - [How do the different types of cards interact with each other?](#how-do-the-different-types-of-cards-interact-with-each-other)
+- [Game play](#game-play)
+  - [How is the game played?](#how-is-the-game-played)
+- [What is the goal of the game?](#what-is-the-goal-of-the-game)
+  - [How do players score points?](#how-do-players-score-points)
+- [End of game](#end-of-game)
+  - [What happens at the end of the game?](#what-happens-at-the-end-of-the-game)
+  - [Is it possible to earn additional points after the game has ended?](#is-it-possible-to-earn-additional-points-after-the-game-has-ended)
+- [Updates](#updates)
+  - [v1.0.2 Audit Update](#v102-audit-update)
+  - [1.0.3 Table on the match](#103-table-on-the-match)
+- [Conclusion](#conclusion)
+  - [Summary of the game and its mechanics.](#summary-of-the-game-and-its-mechanics)
+- [License](#license)
+
+## How many players and cards are involved?
+
+The game is played by two players. Each player has a deck of 11 cards. The deck is made up of 55 cards. There are 11 cards of each type. The types are: Water 💧, Fire 🔥, Rock 🪨, Wind 💨, Plant 🌱.
+
+## What are the types of cards and how are they symbolized?
+
+The types of cards are: Water 💧, Fire 🔥, Rock 🪨, Wind 💨, Plant 🌱. Each type is symbolized by a different emoji.
+
+# Game mechanics
+
+## How do the different types of cards interact with each other?
+
+The cards interact with each other in the following way:
+
+- Water 💧 beats Fire 🔥.
+- Fire 🔥 beats Rock 🪨.
+- Rock 🪨 beats Wind 💨.
+- Wind 💨 beats Plant 🌱.
+- Plant 🌱 beats Water 💧.
+
+# Game play
+
+## How is the game played?
+
+The game is played by turns. Each turn, a player plays one card on the table. The player who plays the card with the highest value wins the turn. If both players play the same card, the turn is a draw. The player who won the turn scores 1 point. If the turn is a draw, no player scores any points.
+
+# What is the goal of the game?
+
+The goal of the game is to score points by grouping cards of the same type. The player with the most points at the end of the game wins.
+
+## How do players score points?
+
+The players score points by grouping cards of the same type. The player who has the most cards of a given type scores 1 point for each card of that type. If both players have the same number of cards of a given type, no player scores any points for that type.
+
+# End of game
+
+## What happens at the end of the game?
+
+At the end of the game, the player with the most points wins.
+
+## Is it possible to earn additional points after the game has ended?
+
+No. It is not possible to earn additional points after the game has ended.
+
+# Updates
+
+## v1.0.2 Audit Update
+
+    Add comments to explain the purpose of each block of code. This will make it easier to understand the code and improve its readability.
+
+    Consider using a dictionary to map the cards to their corresponding effects, rather than using a series of if statements. This will make the code more concise and easier to maintain.
+
+    Use a function to reset the game at the end of each round. This will reduce redundancy and make the code easier to read.
+
+    Use descriptive variable names to make the code more readable. For example, you could use player_card and computer_card instead of player_deck[turn-1] and computer_deck[turn-1].
+
+    Use a for loop to iterate over the turns, rather than a while loop with a counter variable. This will make the code simpler and easier to understand.
+
+    Consider using a for loop to deal the cards to each player, rather than using a for loop with a counter variable. This will make the code more concise and easier to understand.
+
+    Consider adding error handling to handle invalid input and prevent the program from crashing. For example, you could use a try-except block to handle the case where the user enters a value that cannot be converted to an integer.
+
+## 1.0.3 Table on the match
+
+We added a table to view the cards.
+
+```bash
+Player's cards: 🌱 🪨 💧 💨 🔥 🌱 🪨 💧 💨 🔥 🌱
+Computer's cards: 💨 🔥 🌱 🪨 💧 💨 🔥 🌱 🪨 💧 💨
+```
+
+# Conclusion
+
+## Summary of the game and its mechanics.
+
+The game is called "The 11 cards game". It is a game for two players. Each player has a deck of 11 cards. The game is played by turns. Each turn, a player plays one card on the table. The goal of the game is to score points by grouping cards of the same type. The game ends after 11 turns. At the end of the game, the player with the most points wins.
+
+# License
+
+2022 © All rights reserved. Pylar AI creative ML License. [License](https://huggingface.co/spaces/superdatas/LICENSE)
