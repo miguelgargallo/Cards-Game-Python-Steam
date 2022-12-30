@@ -1,6 +1,6 @@
 # This python script is used to define turns, it will copy paste the last card from terminal to terminal
 
-from game import cards, player_deck, computer_deck, card_effects, table, cards_used_by_myself, cards_used_by_rival
+from games import cards, player_deck, computer_deck, card_effects, table, cards_used_by_myself, cards_used_by_rival
 
 # Define turn
 
