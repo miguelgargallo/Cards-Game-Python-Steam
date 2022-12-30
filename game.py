@@ -2,6 +2,8 @@
 
 import random
 
+from turns import *
+
 # Welcome message
 print("Welcome to the card game!")
 
@@ -27,14 +29,29 @@ def reset_game():
     computer_deck.clear()
 
 
+def cards_in_turn_1():
+    """Print cards in turn 1."""
+    for i in range(1):
+        print(f"Your card: {player_deck[turn-1]}")
+        print(f"Computer's card: {computer_deck[turn-1]}")
+    # Paint table 1 with 22x11 pixels in the terminal
+        print('┌' + '─' * 11 + '┐')
+        print('│' + (f"{player_deck[turn-1]}") + 'Vs' + (f"{computer_deck[turn-1]}") + ' ' *
+              1 + '│')
+        print('│' + ' ' *
+              10 + '│')
+        print('└' + '─' * 11 + '┘')
+
 # Define table 22x22 in the terminal
+
+
 def table():
     """Display 22 x 22 pixels table in the terminal."""
     print('┌' + '─' * 22 + '┐')
-    for i in range(22):
+    for i in range(1):
         # Print table and cards used by myself and rival
-        print((f"{player_deck[turn-1]}") + '│' + ' ' *
-              22 + '│' + (f"{computer_deck[turn-1]}"))
+        print('│' + (f"{player_deck[turn-1]}") + 'Vs' + (f"{computer_deck[turn-1]}") + ' ' *
+              22 + '│')
     print('└' + '─' * 22 + '┘')
 
 
@@ -64,23 +81,11 @@ while True:
             player_deck.append(cards.pop())
             computer_deck.append(cards.pop())
 
-        # Play the game
+        # Play the game 11 turns from turns.py
         for turn in range(1, 12):
             print(f"\nTurn {turn}:")
-            print(f"Your card: {player_deck[turn-1]}")
-            print(f"Computer's card: {computer_deck[turn-1]}")
-            print(f"table 22x22: {table()}")
-            print(f"my deck: {cards_used_by_myself()}")
-            print(f"rival deck: {cards_used_by_rival()}")
-            # Display the card table
-            # print("\nCard table:")
-            # print("Player's cards:", end=' ')
-            # for card in player_deck:
-            #    print(card, end=' ')
-            # print()
-            # print("Computer's cards:", end=' ')
-            # for card in computer_deck:
-            #    print(card, end=' ')
+            print(f"table: {table()}")
+            print(f"cards_in_turn_1: {cards_in_turn_1()}")
             print()
 
             # Determine the winner of the turn
